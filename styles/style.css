@@ -41,3 +41,8 @@ footer {
   color: #fff;
   padding: 10px 0;
 }
+
+#mapid {
+  width: 100%; /* Karte soll die ganze Breite des Containers ausfüllen */
+  height: 400px; /* Höhe der Karte */
+}

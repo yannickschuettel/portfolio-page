@@ -6,6 +6,10 @@
     <title>Mein Portfolio</title>
     <!-- Link zur CSS-Datei -->
     <link rel="stylesheet" href="styles/style.css" />
+    <!-- Leaflet CSS einbinden -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS einbinden -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
     <header>
@@ -26,6 +30,11 @@
       <section id="projects">
         <h2>Projekte</h2>
         <p>Liste deine Projekte auf.</p>
+      </section>
+      <section id="map">
+        <h2>Interaktive Karte von Bern</h2>
+        <div id="mapid" style="height: 400px"></div>
+        <!-- Platz für die Karte -->
       </section>
       <section id="contact">
         <h2>Kontakt</h2>
