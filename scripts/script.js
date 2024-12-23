@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Event Listener für jeden Buchstaben hinzufügen
+  const letters = document.querySelectorAll(".letter");
+  letters.forEach((letter) => {
+    letter.addEventListener("click", (e) => {
+      const clickedLetter = e.target.textContent.toUpperCase();
+      const wikiUrl = `https://de.wikipedia.org/wiki/${clickedLetter}`;
+      window.location.href = wikiUrl; // Weiterleitung zu Wikipedia
+    });
+  });
+
   // Leaflet-Karte erstellen
   const map = L.map("mapid").setView([46.9481, 7.4474], 13); // Bern Koordinaten [Latitude, Longitude]
 

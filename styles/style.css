@@ -14,38 +14,30 @@
   overflow: hidden;
 }
 
-#line {
-  font-size: 2rem;
-  font-weight: bold;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-  animation-delay: 0.5s;
-}
-
 #title {
   text-align: center;
+  font-size: 3rem; /* Gesamtgröße des Titels */
+  font-weight: bold;
+  transition: font-size 0.3s ease; /* Übergang für Schriftgrößenänderungen */
 }
 
 .line {
-  font-size: 2rem;
-  font-weight: bold;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
+  font-size: inherit; /* Vererbt die Schriftgröße aus dem #title */
+  font-weight: inherit;
 }
 
-.line:nth-child(1) {
-  animation-delay: 0.5s;
+.letter {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
 
-.line:nth-child(2) {
-  animation-delay: 1.5s;
+.letter:hover {
+  color: #f39c12; /* Farbe ändert sich beim Hover */
+  transform: scale(2); /* Vergrößert den Buchstaben auf das doppelte */
+  font-size: 3.5rem; /* Optional: Noch größere Schriftgröße für den Buchstaben beim Hover */
 }
 
-.line:nth-child(3) {
-  animation-delay: 2.5s;
-}
-
-/* Animation for title fade-in effect */
+/* Animation für den Titel-Fade-In-Effekt */
 @keyframes fadeIn {
   0% {
     opacity: 0;
