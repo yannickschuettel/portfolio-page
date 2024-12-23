@@ -1,3 +1,61 @@
+/* Intro Section */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+#line {
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 0.5s;
+}
+
+#title {
+  text-align: center;
+}
+
+.line {
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.line:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.line:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.line:nth-child(3) {
+  animation-delay: 2.5s;
+}
+
+/* Animation for title fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Main Content */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -43,6 +101,6 @@ footer {
 }
 
 #mapid {
-  width: 100%; /* Karte soll die ganze Breite des Containers ausfüllen */
-  height: 400px; /* Höhe der Karte */
+  width: 100%;
+  height: 400px;
 }

@@ -4,6 +4,16 @@ console.log("Portfolio-Seite erfolgreich geladen!");
 document.addEventListener("DOMContentLoaded", () => {
   alert("Willkommen auf meiner Portfolioseite!");
 
+  // Entfernen der Intro-Seite nach Scrollen
+  let intro = document.getElementById("intro");
+
+  // EventListener für das Scrollen hinzufügen
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      intro.style.display = "none"; // Intro-Seite ausblenden, wenn gescrollt wird
+    }
+  });
+
   // Leaflet-Karte erstellen
   const map = L.map("mapid").setView([46.9481, 7.4474], 13); // Bern Koordinaten [Latitude, Longitude]
 
