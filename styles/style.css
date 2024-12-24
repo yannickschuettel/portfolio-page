@@ -1,11 +1,113 @@
-/* Intro Section */
+/* Allgemeine Formatierungen */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8; /* Helles Blau-Grau als Hintergrund */
+  color: #333; /* Dunkles Grau für Text */
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #1e3a8a; /* Dunkles Blau */
+  color: white;
+  padding: 1.5em 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hauptinhalt */
+main {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Abschnitt für "Über mich" */
+.about-feature {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-feature h3 {
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#mapid {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown und Witz-Button */
+button {
+  background-color: #3b82f6; /* Blau */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #2563eb; /* Dunkleres Blau beim Hover */
+}
+
+/* Intro Animation */
 #intro {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: rgba(
+    30,
+    58,
+    138,
+    0.9
+  ); /* Transparenter Hintergrund mit Blau */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,83 +118,61 @@
 
 #title {
   text-align: center;
-  font-size: 3rem; /* Gesamtgröße des Titels */
+  font-size: 3rem;
   font-weight: bold;
-  transition: font-size 0.3s ease; /* Übergang für Schriftgrößenänderungen */
+  transition: font-size 0.3s ease;
 }
 
 .line {
-  font-size: inherit; /* Vererbt die Schriftgröße aus dem #title */
+  font-size: inherit;
   font-weight: inherit;
 }
 
-.letter {
+a.letter {
+  text-decoration: none;
+  color: white;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
 
-.letter:hover {
-  color: #f39c12; /* Farbe ändert sich beim Hover */
-  transform: scale(2); /* Vergrößert den Buchstaben auf das doppelte */
-  font-size: 3.5rem; /* Optional: Noch größere Schriftgröße für den Buchstaben beim Hover */
+a.letter:hover {
+  color: #93c5fd; /* Hellblau bei Hover */
+  transform: scale(1.5);
+  font-size: 3.5rem;
 }
 
-/* Animation für den Titel-Fade-In-Effekt */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Main Content */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  line-height: 1.6;
-}
-
-header {
-  background: #333;
-  color: #fff;
-  padding: 1em 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-section {
-  padding: 20px;
-  margin: 20px;
-  background: #fff;
-  border-radius: 5px;
-}
-
+/* Footer */
 footer {
   text-align: center;
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px 0;
 }
 
-#mapid {
-  width: 100%;
-  height: 400px;
+footer p {
+  margin: 0;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .about-feature {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }

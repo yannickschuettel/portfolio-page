@@ -1,39 +1,54 @@
-console.log("Portfolio-Seite erfolgreich geladen!");
-
-// Einfaches Beispiel: Begrüßung in der Konsole
 document.addEventListener("DOMContentLoaded", () => {
-  alert("Willkommen auf meiner Portfolioseite!");
+  // Alter berechnen
+  const birthDate = new Date("2000-12-29");
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  document.getElementById(
+    "age"
+  ).textContent = `Ich bin derzeit ${age} Jahre alt.`;
 
-  // Entfernen der Intro-Seite nach Scrollen
-  let intro = document.getElementById("intro");
-
-  // EventListener für das Scrollen hinzufügen
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      intro.style.display = "none"; // Intro-Seite ausblenden, wenn gescrollt wird
-    }
-  });
-
-  // Event Listener für jeden Buchstaben hinzufügen
-  const letters = document.querySelectorAll(".letter");
-  letters.forEach((letter) => {
-    letter.addEventListener("click", (e) => {
-      const clickedLetter = e.target.textContent.toUpperCase();
-      const wikiUrl = `https://de.wikipedia.org/wiki/${clickedLetter}`;
-      window.location.href = wikiUrl; // Weiterleitung zu Wikipedia
-    });
-  });
-
-  // Leaflet-Karte erstellen
-  const map = L.map("mapid").setView([46.9481, 7.4474], 13); // Bern Koordinaten [Latitude, Longitude]
-
-  // OpenStreetMap Tile Layer hinzufügen
+  // Karte von Bern mit Worb als Heimatort
+  const map = L.map("mapid").setView([46.934, 7.603], 13); // Worb Koordinaten
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
+  L.marker([46.934, 7.603])
+    .addTo(map)
+    .bindPopup("<b>Worb!</b><br>Mein Heimatort.")
+    .openPopup();
 
-  // Marker in Bern setzen
-  const marker = L.marker([46.9481, 7.4474]).addTo(map);
-  marker.bindPopup("<b>Bern!</b><br>Hauptstadt der Schweiz.").openPopup();
+  // Countdown bis zum Bachelor-Abschluss
+  const endDate = new Date("2026-06-30T23:59:59"); // Abschluss im Sommer 2026
+  function updateCountdown() {
+    const now = new Date();
+    const timeDiff = endDate - now;
+    const minutesLeft = Math.floor(timeDiff / (1000 * 60));
+    document.getElementById(
+      "countdown"
+    ).textContent = `${minutesLeft} Minuten bis zum Abschluss.`;
+  }
+  setInterval(updateCountdown, 60000);
+  updateCountdown();
+
+  // Joke API
+  document.getElementById("jokeButton").addEventListener("click", () => {
+    fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("joke").textContent =
+          data.joke || "Kein Witz gefunden!";
+      });
+  });
+
+  // Verstecke den Rest der Seite und zeige erst bei Scrollen an
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      document.getElementById("intro").style.display = "none";
+    }
+  });
 });
