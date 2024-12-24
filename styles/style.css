@@ -291,3 +291,38 @@ footer p {
     margin: 10px 0;
   }
 }
+/* Projekt Abschnitt */
+#projects {
+  padding: 40px 20px;
+  background-color: #f3f4f6;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#projects h2 {
+  text-align: center;
+  color: #1e3a8a;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
