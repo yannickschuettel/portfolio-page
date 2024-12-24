@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mein Portfolio</title>
@@ -88,112 +92,97 @@
     </header>
 
     <main>
-      <section id="about">
-        <h2>Über mich</h2>
-        <p>
-          Als gelernter Konstrukteur habe ich schon immer gerne Dinge entwickelt
-          und in Projektteams gearbeitet. Da ich eine neue Herausforderung
-          suchte, aber trotzdem die Aspekte meines bisherigen Berufs beibehalten
-          wollte, war der Schritt, ein Wirtschaftsinformatik-Studium zu
-          beginnen, genau das Richtige für mich. Derzeit arbeite ich als
-          Price-Manager und im First-Level-IT-Support. Nach dem Studium ist es
-          jedoch definitiv mein Ziel, als Projektleiter tätig zu sein.
-        </p>
+      <!-- Über mich Abschnitt -->
+<section id="about">
+  <h2>Über mich</h2>
+  <p>
+    Als gelernter Konstrukteur habe ich schon immer gerne Dinge entwickelt
+    und in Projektteams gearbeitet. Da ich eine neue Herausforderung
+    suchte, aber trotzdem die Aspekte meines bisherigen Berufs beibehalten
+    wollte, war der Schritt, ein Wirtschaftsinformatik-Studium zu
+    beginnen, genau das Richtige für mich. Derzeit arbeite ich als
+    Price-Manager und im First-Level-IT-Support. Nach dem Studium ist es
+    jedoch definitiv mein Ziel, als Projektleiter tätig zu sein.
+  </p>
 
-        <div class="about-feature">
-          <h3>Alter:</h3>
-          <p id="age"></p>
-        </div>
+  <!-- Alter -->
+  <div class="about-feature">
+    <h3>Alter:</h3>
+    <p id="age"></p>
+  </div>
 
-        <div class="about-feature">
-          <h3>Heimatort:</h3>
-          <div id="mapid" style="height: 300px"></div>
-        </div>
+  <!-- Heimatort (Karte) -->
+  <div class="about-feature">
+    <h3>Heimatort:</h3>
+    <div id="mapid" style="height: 300px"></div>
+  </div>
 
-        <div class="about-feature">
-          <h3>Countdown bis zum Bachelor:</h3>
-          <p id="countdown"></p>
-        </div>
+  <!-- Countdown -->
+  <div class="about-feature">
+    <h3>Countdown bis zum Bachelor:</h3>
+    <p id="countdown"></p>
+  </div>
 
-        <div class="about-feature">
-          <h3>Hobby - Schlechte Witze erzählen:</h3>
-          <p id="joke">Lade einen Witz...</p>
-          <button id="jokeButton">Neuen Witz holen</button>
-        </div>
-      </section>
-      <section id="resume">
-        <h2>Lebenslauf</h2>
-        <div class="timeline">
-          <div class="timeline-item" data-year="2016-2020">
-            <div class="timeline-content">
-              <h3>Lehre als Konstrukteur in der Ansorix</h3>
-              <p>August 2016 bis Juli 2020</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2017-2020">
-            <div class="timeline-content">
-              <h3>Technische Berufsmatura</h3>
-              <p>August 2017 bis Juni 2020</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2020-2022">
-            <div class="timeline-content">
-              <h3>Angestellter bei der Almatec als Konstrukteur</h3>
-              <p>Juli 2020 bis Juli 2022</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2021">
-            <div class="timeline-content">
-              <h3>Militärdienst</h3>
-              <p>Januar 2021 bis Mai 2021</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2022-now">
-            <div class="timeline-content">
-              <h3>
-                Angestellter bei der Almatec als Pricing-Manager und Firstlevel
-                IT-Support
-              </h3>
-              <p>Juli 2022 bis jetzt</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2022-now">
-            <div class="timeline-content">
-              <h3>Studium in Wirtschaftsinformatik</h3>
-              <p>September 2022 bis jetzt</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- Witz -->
+  <div class="about-feature">
+    <h3>Hobby - Schlechte Witze erzählen:</h3>
+    <p id="joke">Lade einen Witz...</p>
+    <button id="jokeButton">Neuen Witz holen</button>
+  </div>
+</section>
 
-      <section id="projects">
-        <h2>Projekte</h2>
+<!-- Lebenslauf -->
+<section id="resume">
+  <h2>Lebenslauf</h2>
+  <div class="timeline">
+    <div class="timeline-item" data-year="2016-2020">
+      <div class="timeline-content">
+        <h3>Lehre als Konstrukteur in der Ansorix</h3>
+        <p>August 2016 bis Juli 2020</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-year="2017-2020">
+      <div class="timeline-content">
+        <h3>Technische Berufsmatura</h3>
+        <p>August 2017 bis Juni 2020</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-year="2020-2022">
+      <div class="timeline-content">
+        <h3>Angestellter bei der Almatec als Konstrukteur</h3>
+        <p>Juli 2020 bis Juli 2022</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-year="2021">
+      <div class="timeline-content">
+        <h3>Militärdienst</h3>
+        <p>Januar 2021 bis Mai 2021</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-year="2022-now">
+      <div class="timeline-content">
+        <h3>Angestellter bei der Almatec als Pricing-Manager</h3>
+        <p>Juli 2022 bis jetzt</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="project">
-          <h3>
-            Letztes Projekt: Programmieren und einführen eines internen
-            ERP-Konfigurators
-          </h3>
-          <p>
-            Von 2022 bis 2024 habe ich zudem einen für unsere ANK Schaltschrank
-            Produktreihe, einen Konfigurator in unserem ERP-System AX 2012
-            programmiert. Diese dient zur automatischen Stücklisten und
-            Arbeitsplan Generierung und kann somit auch die Angebotspreise
-            direkt selbst errechnen. Dies war mein erstes grosses Projekt und es
-            folgen hoffentlich viele weitere.
-          </p>
-        </div>
-      </section>
+<!-- Footer mit Kontakt -->
+<footer id="contact">
+  <h2>Kontakt</h2>
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+    <label for="email">E-Mail:</label>
+    <input type="email" id="email" name="email" required />
+    <label for="message">Nachricht:</label>
+    <textarea id="message" name="message" required></textarea>
+    <button type="submit">Absenden</button>
+  </form>
+  <p id="responseMessage"></p>
+</footer>
 
-      <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Kontaktinformationen hier einfügen.</p>
-      </section>
-    </main>
-
-    <footer>
-      <p>© 2024 Mein Portfolio</p>
-    </footer>
 
     <script src="scripts/script.js"></script>
   </body>

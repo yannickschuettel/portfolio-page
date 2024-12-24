@@ -52,3 +52,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Initialisiere EmailJS mit deiner User ID
+emailjs.init("yysJpTsLiOHvvDpbH"); // Deine User ID
+
+// Event-Listener zum Formular hinzufügen
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Verhindert das Standardformular-Verhalten
+
+    // Erstelle FormData-Objekt mit den Formulardaten
+    var formData = new FormData(this);
+
+    // Sende das Formular über EmailJS
+    emailjs.sendForm("service_jqigagw", "template_0drneom", formData).then(
+      function (response) {
+        console.log("Erfolgreich gesendet:", response);
+        document.getElementById("responseMessage").innerText =
+          "Nachricht erfolgreich gesendet!";
+        document.getElementById("contactForm").reset(); // Formular zurücksetzen
+      },
+      function (error) {
+        console.error("Fehler beim Senden:", error);
+        document.getElementById("responseMessage").innerText =
+          "Es gab einen Fehler. Bitte versuche es später erneut.";
+      }
+    );
+  });
