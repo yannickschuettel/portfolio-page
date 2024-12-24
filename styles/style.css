@@ -3,19 +3,19 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9fafb; /* Helles, elegantes Grau */
-  color: #333;
+  background-color: #121212; /* Dunkler Hintergrund */
+  color: #e0e0e0; /* Helles Grau für Text */
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: #1e3a8a; /* Dunkles Blau */
-  color: white;
+  background-color: #1f1f1f; /* Dunkler Grauton */
+  color: #e0e0e0;
   padding: 2em 0;
   text-align: center;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #2563eb;
+  border-bottom: 3px solid #444;
 }
 
 header h1 {
@@ -36,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #e0e0e0;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #93c5fd; /* Helles Blau bei Hover */
+  color: #bbbbbb; /* Helleres Grau bei Hover */
 }
 
 /* Hauptinhalt */
@@ -56,7 +56,7 @@ main {
 
 /* Abschnittsüberschriften */
 h2 {
-  color: #1e3a8a;
+  color: #e0e0e0;
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: 600;
@@ -64,7 +64,7 @@ h2 {
 
 /* Abschnitt für "Über mich" */
 .about-feature {
-  background-color: white;
+  background-color: #1e1e1e; /* Dunkler Hintergrund für Features */
   padding: 25px;
   margin: 20px 0;
   border-radius: 12px;
@@ -77,7 +77,7 @@ h2 {
 }
 
 .about-feature h3 {
-  color: #1e3a8a;
+  color: #e0e0e0;
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
@@ -91,8 +91,8 @@ h2 {
 
 /* Countdown und Witz-Button */
 button {
-  background-color: #3b82f6; /* Blau */
-  color: white;
+  background-color: #333333; /* Dunkles Grau */
+  color: #e0e0e0;
   padding: 14px 28px;
   border: none;
   cursor: pointer;
@@ -103,7 +103,7 @@ button {
 }
 
 button:hover {
-  background-color: #2563eb; /* Dunkleres Blau beim Hover */
+  background-color: #555555; /* Helleres Grau beim Hover */
   transform: scale(1.05);
 }
 
@@ -115,15 +115,15 @@ button:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(
-    30,
-    58,
-    138,
+    18,
+    18,
+    18,
     0.9
-  ); /* Transparenter Hintergrund mit Blau */
+  ); /* Dunkler transparenter Hintergrund */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #e0e0e0;
   z-index: 9999;
   overflow: hidden;
 }
@@ -137,13 +137,13 @@ button:hover {
 
 a.letter {
   text-decoration: none;
-  color: white;
+  color: #e0e0e0;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
 
 a.letter:hover {
-  color: #93c5fd;
+  color: #bbbbbb; /* Helleres Grau bei Hover */
   transform: scale(1.5);
   font-size: 4rem;
 }
@@ -151,8 +151,8 @@ a.letter:hover {
 /* Footer */
 footer {
   text-align: center;
-  background-color: #1e3a8a;
-  color: white;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
   padding: 20px 0;
   box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.1);
 }
@@ -165,7 +165,7 @@ footer p {
 /* Lebenslauf */
 #resume {
   padding: 40px 25px;
-  background-color: #ffffff;
+  background-color: #1e1e1e;
   margin: 20px 0;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -173,7 +173,7 @@ footer p {
 
 #resume h2 {
   text-align: center;
-  color: #1e3a8a;
+  color: #e0e0e0;
   font-size: 2.5rem;
   margin-bottom: 30px;
   font-weight: 600;
@@ -193,7 +193,7 @@ footer p {
   min-width: 280px;
   flex-shrink: 0;
   padding: 20px;
-  background-color: #f3f4f6;
+  background-color: #333333; /* Dunkler Hintergrund */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   scroll-snap-align: start;
@@ -203,12 +203,12 @@ footer p {
 .timeline-item h3 {
   font-size: 1.3rem;
   margin-bottom: 12px;
-  color: #1e3a8a;
+  color: #e0e0e0;
 }
 
 .timeline-item p {
   font-size: 1.1rem;
-  color: #666;
+  color: #bbb;
 }
 
 .timeline-item[data-year]:before {
@@ -219,13 +219,13 @@ footer p {
   transform: translateX(-50%);
   font-size: 1.6rem;
   font-weight: bold;
-  color: #1e3a8a;
+  color: #e0e0e0;
 }
 
 /* Projekt Abschnitt */
 #projects {
   padding: 40px 25px;
-  background-color: #f3f4f6;
+  background-color: #1e1e1e;
   margin: 20px 0;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -233,14 +233,14 @@ footer p {
 
 #projects h2 {
   text-align: center;
-  color: #1e3a8a;
+  color: #e0e0e0;
   font-size: 2.5rem;
   margin-bottom: 30px;
   font-weight: 600;
 }
 
 .project {
-  background-color: #ffffff;
+  background-color: #333333;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -254,13 +254,13 @@ footer p {
 
 .project h3 {
   font-size: 1.8rem;
-  color: #1e3a8a;
+  color: #e0e0e0;
   margin-bottom: 15px;
 }
 
 .project p {
   font-size: 1.1rem;
-  color: #666;
+  color: #bbb;
   line-height: 1.6;
 }
 
@@ -270,9 +270,9 @@ form {
   max-width: 450px;
   margin: 0 auto;
   padding: 25px;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: #1e1e1e;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -280,7 +280,7 @@ label {
   display: block;
   margin: 12px 0 6px;
   font-size: 1.1rem;
-  color: #333;
+  color: #e0e0e0;
 }
 
 input,
@@ -289,10 +289,10 @@ textarea {
   padding: 12px;
   margin: 6px 0 18px;
   border-radius: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #555;
   font-size: 1rem;
-  color: #333;
-  background-color: #f9f9f9;
+  color: #e0e0e0;
+  background-color: #333;
   box-sizing: border-box;
 }
 
@@ -314,28 +314,20 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem;
 }
 
 button:hover {
   background-color: #45a049;
-  transform: scale(1.05);
 }
 
-#responseMessage {
-  text-align: center;
-  font-size: 16px;
-  margin-top: 12px;
-}
+/* Media Queries für kleinere Bildschirme */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
 
-#responseMessage.error {
-  color: #f44336;
-}
-
-footer h2 {
-  color: white;
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 20px;
+  nav ul li {
+    margin-bottom: 20px;
+  }
 }
